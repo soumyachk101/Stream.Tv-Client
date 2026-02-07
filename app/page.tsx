@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Logo from "@/components/Logo";
-import { Video } from "lucide-react";
 
 export default function Home() {
   return (

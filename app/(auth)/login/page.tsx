@@ -1,6 +1,5 @@
 'use client';
 import { useState, useEffect, Suspense } from 'react';
-import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Eye, EyeOff, Loader2 } from 'lucide-react';
 import { API_BASE } from '@/lib/api';
@@ -120,7 +119,7 @@ function AuthContent() {
                 className="text-center"
               >
                 <h2 className="text-3xl font-bold mb-4">One of Us?</h2>
-                <p className="mb-8 text-blue-100">If you already have an account, just sign in. We've missed you!</p>
+                <p className="mb-8 text-blue-100">If you already have an account, just sign in. We&apos;ve missed you!</p>
                 <button onClick={toggleMode} className="border-2 border-white px-8 py-2 rounded-full font-bold hover:bg-white hover:text-blue-600 transition-colors">
                   Sign In
                 </button>

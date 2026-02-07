@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import Logo from './Logo';
-import { Video, Upload, User as UserIcon, LogOut, Search } from 'lucide-react';
+import { Upload, User as UserIcon, LogOut, Search } from 'lucide-react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
