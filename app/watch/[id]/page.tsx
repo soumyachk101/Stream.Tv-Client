@@ -23,13 +23,13 @@ export default function WatchPage() {
 
   useEffect(() => {
     if (!videoId) {
-      setLoading(false);
+      if (loading) setLoading(false);
       setError('Invalid video');
       return;
     }
 
-    setLoading(true);
-    setError(null);
+    if (!loading) setLoading(true);
+    if (error) setError(null);
 
     fetch(`${API_BASE}/api/videos/${videoId}`)
       .then((res) => {
@@ -49,6 +49,7 @@ export default function WatchPage() {
         setError('Failed to load video');
         setLoading(false);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [videoId]);
 
   if (loading) {

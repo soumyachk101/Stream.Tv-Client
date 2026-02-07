@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Stream.Tv",
   description: "Next Gen Video Streaming Platform",
+  icons: {
+    icon: "/logo.svg",
+  },
 };
 
 export default function RootLayout({
