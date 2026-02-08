@@ -1,5 +1,7 @@
-import { redirect } from 'next/navigation';
+'use client';
+
+import AuthModern from '@/components/auth/AuthModern';
 
 export default function RegisterPage() {
-  redirect('/login?mode=register');
+  return <AuthModern initialMode="register" />;
 }
