@@ -4,18 +4,12 @@ export default function Logo({ className = "w-10 h-10" }: { className?: string }
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 100 100"
-            fill="none"
+            viewBox="0 0 24 24"
+            fill="currentColor"
             className={className}
+            style={{ filter: "drop-shadow(0px 1px 1px rgba(0,0,0,0.3))" }}
         >
-            <defs>
-                <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#3b82f6" />
-                    <stop offset="100%" stopColor="#7c3aed" />
-                </linearGradient>
-            </defs>
-            <rect x="10" y="20" width="80" height="60" rx="15" fill="url(#logo-grad)" />
-            <path d="M40 35 L70 50 L40 65 Z" fill="white" />
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
         </svg>
     );
 }
