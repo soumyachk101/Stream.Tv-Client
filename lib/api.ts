@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || (process.env.NODE_ENV === 'production' ? 'https://stream-tv-server-liart.vercel.app' : 'http://localhost:5000');
 
 if (typeof window !== 'undefined') {
   console.log('🔌 API Base URL:', API_URL);
