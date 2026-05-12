@@ -88,6 +88,7 @@ export default function AuthModern({ initialMode }: AuthModernProps) {
                         <div className="flex items-end justify-between">
                             <div className="flex items-center gap-4">
                                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 border-2 border-white/20 p-0.5">
+                                     {/* eslint-disable-next-line @next/next/no-img-element */}
                                     <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix" alt="User" className="w-full h-full rounded-full bg-slate-800" />
                                 </div>
                                 <div>
@@ -182,6 +183,7 @@ export default function AuthModern({ initialMode }: AuthModernProps) {
                             </div>
 
                             <button type="button" className="w-full py-3.5 rounded-xl border border-slate-200 flex items-center justify-center gap-2 hover:bg-slate-50 transition-colors text-slate-700 font-bold text-sm" onClick={() => alert("Google Login coming soon")}>
+                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img src="https://www.svgrepo.com/show/475656/google-color.svg" className="w-5 h-5" alt="Google" />
                                 {isLogin ? 'Login with Google' : 'Sign up with Google'}
                             </button>
