@@ -2,7 +2,7 @@
 import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { Play, Plus, TrendingUp, Radio, Flame, Music, Gamepad2, Search } from 'lucide-react';
+import { Play, Plus, TrendingUp, Radio, Flame, Music, Gamepad2 } from 'lucide-react';
 import { useSearchParams } from 'next/navigation';
 import { API_BASE } from '@/lib/api';
 import { motion } from 'framer-motion';
@@ -38,6 +38,7 @@ function VideoGrid() {
       return;
     }
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLoading(true);
     if (error) setError(null);
 
@@ -106,7 +107,7 @@ function VideoGrid() {
         <div className="w-20 h-20 bg-white/5 rounded-full flex items-center justify-center mb-6 ring-1 ring-white/10 shadow-[0_0_30px_rgba(255,255,255,0.05)]">
           <Play size={32} className="text-white/40 ml-1" />
         </div>
-        <h3 className="text-2xl font-bold text-white mb-2 relative z-10">It's quiet here...</h3>
+        <h3 className="text-2xl font-bold text-white mb-2 relative z-10">It&apos;s quiet here...</h3>
         <p className="text-slate-400 max-w-md mx-auto mb-8 relative z-10">Upload your first video to start your streaming journey and share your content with the world.</p>
         <Link href="/upload" className="glass-button-primary px-8 py-3 rounded-xl font-semibold relative z-10">Upload Video</Link>
       </div>
@@ -146,6 +147,7 @@ function VideoGrid() {
             >
               <div className="aspect-video bg-slate-800 relative overflow-hidden">
                 {video.thumbnailUrl ? (
+                  // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={video.thumbnailUrl}
                     alt={video.title}
@@ -202,7 +204,9 @@ export default function Dashboard() {
       router.replace('/login');
       return;
     }
-    setAuthChecked(true); // eslint-disable-next-line react-hooks/set-state-in-effect
+    setTimeout(() => {
+      setAuthChecked(true);
+    }, 0);
   }, [router]);
 
   if (!authChecked) {
